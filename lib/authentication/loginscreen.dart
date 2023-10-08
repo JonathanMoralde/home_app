@@ -17,7 +17,7 @@ class LoginScreen extends StatelessWidget {
           Opacity(
             opacity: 0.4, // Adjust the opacity as needed
             child: Image.asset(
-              'lib/images/bg2.png', // Replace with your image path
+              'lib/images/bg3.png', // Replace with your image path
               fit: BoxFit.cover,
               width: double.infinity,
               height: double.infinity,
@@ -76,7 +76,7 @@ class LoginScreen extends StatelessWidget {
                     // Username textfield
                     ,
                     const SizedBox(
-                      height: 35,
+                      height: 55,
                     ),
                     StyledTextField(
                       controller: emailController,
@@ -107,28 +107,78 @@ class LoginScreen extends StatelessWidget {
                       btnIcon: const Icon(Icons.login),
                       btnWidth: 250,
                     ),
+
                     const SizedBox(
-                      height: 15,
+                      height: 10,
+                    ),
+                    SizedBox(
+                      width: 250,
+                      child: GestureDetector(
+                        onTap: () {},
+                        child: const Text(
+                          "Forgot Password?",
+                          style: TextStyle(
+                              letterSpacing: 1, fontFamily: "Poppins"),
+                          textAlign: TextAlign.right,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    SizedBox(
+                      width: 250,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Expanded(
+                            child: Container(
+                              height: 1,
+                              color: Colors.black,
+                            ),
+                          ),
+                          Padding(
+                            padding:
+                                const EdgeInsets.symmetric(horizontal: 8.0),
+                            child: Text("OR"),
+                          ),
+                          Expanded(
+                            child: Container(
+                              height: 1,
+                              color: Colors.black,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+
+                    StyledButton(
+                      btnText: "SIGN WITH GOOGLE",
+                      onClick: () {},
+                      btnWidth: 250,
+                    ),
+
+                    const SizedBox(
+                      height: 35,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text("Don't have an account yet?"),
+                        const Text("Don't have an account yet?"),
                         const SizedBox(
-                          width: 10,
+                          width: 5,
                         ),
-                        Text("SIGN UP")
+                        GestureDetector(
+                          onTap: () {},
+                          child: const Text(
+                            "SIGN UP",
+                            style: TextStyle(fontWeight: FontWeight.w600),
+                          ),
+                        )
                       ],
-                    ),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    GestureDetector(
-                      onTap: () {},
-                      child: const Text(
-                        "Forgot Password?",
-                        style: TextStyle(letterSpacing: 1),
-                      ),
                     ),
                   ],
                 ),
